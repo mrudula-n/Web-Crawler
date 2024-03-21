@@ -129,8 +129,8 @@ async function startCrawling(startUrl, keyword, concurrency = 6) {
     
         if (urlsWithFrequency.length > 0) {
           console.log(`Keyword: ${keyword}`);
-          console.log('URLs containing all words from the keyword (sorted by combined frequency):');
-          urlsWithFrequency.forEach(entry => console.log(`${entry.url} (frequency: ${entry.frequency})`));
+          console.log('URLs containing all words from the keyword:');
+          urlsWithFrequency.forEach(entry => console.log(`${entry.url}`));
         } else {
           console.log(`No content found containing all words from the keyword: ${keyword}`);
         }
@@ -140,4 +140,5 @@ async function startCrawling(startUrl, keyword, concurrency = 6) {
 }
 
 // Replace with your starting URL and keyword
-startCrawling('https://www.msit.ac.in/', 'curriculum');
+startCrawling('https://www.msit.ac.in/', 'Looking to advance your career');
+module.exports = { startCrawling };
