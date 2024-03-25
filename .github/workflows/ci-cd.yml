@@ -28,13 +28,13 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: your-username/your-repo-name:latest
+          tags: mrudula3/web_search
           build-args: |
             BUILDKIT_INLINE_CACHE=1
       
       - name: Run Tests
         run: |
-          docker run --name my-test-container your-username/your-repo-name:latest npm test
+          docker run --name my-test-container mrudula3/web_search npm test
           docker rm my-test-container
 
   deploy:
