@@ -1,3 +1,5 @@
+const { processText } = require('../textProcessor');
+
 class ContentStorage {
     constructor() {
         this.contents = {}; // Key: URL, Value: HTML content
@@ -21,6 +23,10 @@ class ContentStorage {
         });
     }
 
+    getContent(url) {
+        return this.contents[url];
+    }
+
     getUrlsForWord(word) {
         if (this.invertedIndex[word]) {
             return Array.from(this.invertedIndex[word]);
@@ -28,3 +34,5 @@ class ContentStorage {
         return [];
     }
 }
+
+module.exports = ContentStorage;
