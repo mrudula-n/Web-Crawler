@@ -140,5 +140,5 @@ async function startCrawling(startUrl, keyword, concurrency = 6) {
 }
 
 // Replace with your starting URL and keyword
-startCrawling('https://www.msit.ac.in/', 'Hybrid Learning');
+startCrawling('https://www.msit.ac.in/', 'IIIT');
 module.exports = { startCrawling };
