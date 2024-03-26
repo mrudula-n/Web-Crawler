@@ -31,7 +31,10 @@ jobs:
           tags: mrudula3/web_search
           build-args: |
             BUILDKIT_INLINE_CACHE=1
-      
+            
+      - name: List contents of the src directory
+        run: ls -la src/
+
       - name: Run Tests
         run: |
           docker run --name my-test-container mrudula3/web_search npm test
