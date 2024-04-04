@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 // Serve a welcome message at the root URL
 app.get('/', (req, res) => {
-    res.send(`<center><h1>Welcome to Search Engine Application</h1> \n <h3>Please Enter the URL and Keyword<h1><center>`);
+    res.send(`<center><h1>Welcome to Search Engine Application</h1> \n <h3>You are in localhost 3000, Please check your terminal for the output<h1><center>`);
 });
 
 // Endpoint to start crawling
